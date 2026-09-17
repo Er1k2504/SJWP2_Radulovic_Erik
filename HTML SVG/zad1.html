@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=
+  , initial-scale=1.0"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas
+      id="mycanvas"
+      width="600px"
+      height="600px"
+      style="border: 1px solid black"
+    ></canvas>
+  </body>
+  <script>
+    let c = document.getElementById("mycanvas");
+    let ctx = c.getContext("2d");
+
+    ctx.beginPath();
+    ctx.rect(0, 400, 600, 200);
+    ctx.fillStyle = "dodgerblue";
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.rect(0, 0, 600, 400);
+    ctx.fillStyle = "lightblue";
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(500, 100, 50, 0, 2 * Math.PI);
+    ctx.fillStyle = "yellow";
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.rect(25, 370, 300, 60);
+    ctx.fillStyle = "brown";
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.rect(160, 20, 20, 350);
+    ctx.fillStyle = "black";
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.moveTo(180, 300);
+    ctx.lineTo(180, 90);
+    ctx.lineTo(300, 300);
+    ctx.fillStyle = "white";
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.moveTo(160, 300);
+    ctx.lineTo(160, 90);
+    ctx.lineTo(50, 300);
+    ctx.fillStyle = "white";
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.moveTo(155, 30);
+    ctx.lineTo(155, 70);
+    ctx.lineTo(100, 50);
+    ctx.fillStyle = "green";
+    ctx.strokeStyle = "yellow";
+    ctx.stroke();
+    ctx.fill();
+  </script>
+</html>

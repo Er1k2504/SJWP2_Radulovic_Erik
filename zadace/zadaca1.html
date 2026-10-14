@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skriptni jezici</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+    <ul class="nav">
+        <li><a href="/zadace/sport.html">Sport</a></li>
+        <li><a href="/zadace/novac.html">Novac</a></li>
+        <li><a href="/zadace/vijesti.html">Vijesti</a></li>
+    </ul>
+
+    <h1>Ponavljanje Canvas i SVG</h1>
+<p>Canvas je oznaka (tag) HTML5 standarda namijenjena crtanju. <br>
+Canvas je 2D crtaća platforma unutar web preglednika, a koristi JavaScript i HTML.<br>
+Upotrebom JavaScript-a se može pristupiti čitavom setu funkcija za crtanje linija, <br>
+pravokutnika, lukova, crta, teksta … <br>
+On nema vlastiti sadržaj, a od parametara ima samo dimenzije.</p>
+
+<ul>
+    <li>Canvas API (API - Application Programming Interface - aplikacijsko programsko <br>
+sučelje) osigurava alate za crtanje grafike putem JavaScript-a i HTML &lt;canvas&gt; <br>
+elementa.</li>
+    <li>Canvas API je uglavnom namijenjen 2D crtanju, iako postoji mogućnost rada i sa 3D<br>
+grafikom preko WebGL API –ja</li>
+    <li>Crtanje grafike s pomoću oznake &lt;canvas&gt; kombinira poznavanje HTML-a, CSS-a i <br>
+JavaScripta, pa ćemo njega učiti sljedećem poglavlju.</li>
+</ul>
+<hr>
+<p>SVG (Scalable Vector Graphics) većinom je manje težine u usporedbi sa Bitmap rasterskom<br>
+slikom, koja posjeduje otprilike iste rezoluciju i grafički prikaz.<br>
+Uključivanje SVG-a u HTML dokument omogućava naknadno stiliziranje grafike putem CSS-a,<br>
+ali i manipulaciju JavaScript-om. Tako možemo promijeniti svojstva, kao što su: boja <br>
+pozadine, teksta, okvira, na isti način kao i za bilo koji HTML element. <br>
+Zbog toga je omogućeno i animirati sve SVG objekte preko JavaScript biblioteke kao što je<br>
+jQuery.</p>
+<hr>
+<h3>Usporedba SVG-a i Canvasa</h3>
+<table class = "table1">
+        <tr>
+            <th>Category</th>
+            <th>canvas</th>
+            <th>SVG</th>
+        </tr>
+        <tr>
+            <th>Supporting elements</th>
+            <th>Bitmap, based on pixels</th>
+            <th>Vector illustration, based on graphic elements</th>
+        </tr>
+        <tr>
+            <th>Operation objective</th>
+            <th>Single HTML element</th>
+            <th>Various graphic elements</th>
+        </tr>
+        <tr>
+            <th>Driver</th>
+            <th>JavaScript and other script driven</th>
+            <th>Script and CSS driven</th>
+    </table>
+
+    <br>
+    <br>
+    <br>
+
+    <table class="table2">
+        <tr>
+            <th>Mjesec</th>
+            <th>Ušteda</th>
+            <th>Ušteda za blagdane!</th>
+        </tr>
+        <tr>
+            <th>Siječanj</th>
+            <th>$100</th>
+            <th>50</th>
+        </tr>
+    <tr>
+            <th>Veljača</th>
+            <th>$80</th>
+    </table>
+
+    <br>
+    <br>
+    <br>
+
+    <img src="/zadace/Screenshot 2026-10-09 181451.png" alt="vector" width="480" height="220">
+
+    <br>
+    <br>
+    <br>
+    <br>
+     <canvas
+      id="mycanvas"
+      width="600px"
+      height="600px"
+      style="border: 1px solid black"
+    ></canvas>
+  </body>
+  <script>
+    let c = document.getElementById("mycanvas");
+    let ctx = c.getContext("2d");
+
+    ctx.beginPath();
+    ctx.rect(0, 400, 600, 200);
+    ctx.fillStyle = "dodgerblue";
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.rect(0, 0, 600, 400);
+    ctx.fillStyle = "lightblue";
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(500, 100, 50, 0, 2 * Math.PI);
+    ctx.fillStyle = "yellow";
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.rect(25, 370, 300, 60);
+    ctx.fillStyle = "brown";
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.rect(160, 20, 20, 350);
+    ctx.fillStyle = "black";
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.moveTo(180, 300);
+    ctx.lineTo(180, 90);
+    ctx.lineTo(300, 300);
+    ctx.fillStyle = "crimson";
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.moveTo(160, 300);
+    ctx.lineTo(160, 90);
+    ctx.lineTo(50, 300);
+    ctx.fillStyle = "white";
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.moveTo(155, 30);
+    ctx.lineTo(155, 70);
+    ctx.lineTo(100, 50);
+    ctx.fillStyle = "red";
+    ctx.strokeStyle = "yellow";
+    ctx.stroke();
+    ctx.fill();
+  </script>
+
+<form action="#" method="get">
+        <label for="name">Unesi ime:</label> <br>
+        <input type="text" id="name" placeholder="Unesi ime..." required> <br>
+        <label for="password">Unesi lozinku:</label> <br>
+        <input type="password" id="password" placeholder="Unesi lozinku..." required> <br>
+        <label for="colorpicker">Unesi boju:</label> <br>
+        <input type="color" id="colorpicker" placeholder="Unesi boju..." required> <br>
+        <br>
+        <input type="submit" value = "Pošalji" id = "button">
+        <input type="reset" value = "Resetiraj" id = "button">
+    
+</body>
+</html>

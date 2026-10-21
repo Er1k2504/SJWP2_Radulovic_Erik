@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prijava na izlet</title>
+  <link rel="stylesheet" href="css/stil.css">
+</head>
+<body>
+
+  <header class="zaglavlje">
+    <h1>Prijava na stru&ccaron;ni izlet</h1>
+    <p>Tehni&ccaron;ka &scaron;kola Slavonski Brod</p>
+  </header>
+
+  <main class="omotac">
+
+    <form class="obrazac" action = "primljeno.html" method = "get">
+
+      <p class="polje">
+        <label for="ime">Ime</label>
+        <input type="text" id="ime" name="ime">
+      </p>
+
+      <p class="polje">
+        <label for="prezime">Prezime</label>
+        <input type="text" id="prezime">
+      </p>
+
+      <p class="polje">
+        <label for="razred">Razred</label>
+        <select id="razred" name="razred">
+          <option value="4a">4.A</option>
+          <option value="4b">4.B</option>
+          <option value="4e">4.E</option>
+        </select>
+      </p>
+
+      <p class="polje">
+        <label for="eposta">E-po&scaron;ta</label>
+        <input type="email" id="eposta" name="eposta">
+      </p>
+
+      <p class="polje">
+        <label for="napomena">Napomena</label>
+        <textarea id="napomena" name="napomena" rows="3"></textarea>
+      </p>
+
+      <p class="polje">
+        <button type="submit">Po&scaron;alji prijavu</button>
+      </p>
+
+    </form>
+
+  </main>
+
+</body>
+</html>

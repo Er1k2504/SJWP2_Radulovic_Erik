@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p>lorem ipsum</p>
+    <button>Klikni</button>
+    <script>
+
+        let paragraph = document.querySelector('p');
+        let button = document.querySelector('button');
+
+        button.addEventListener('click', function(){
+            paragraph.style.visibility = "hidden";
+        })
+        if(paragraph.style.visibility = "hidden"){
+            button.addEventListener('click', function(){
+                paragraph.style.visibility = "visible";
+            })
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Moja stranica</h1>
+    <p id="opis"></p>
+
+    <button>Prikazi poruku</button>
+    <p id ="poruka"></p>
+
+    <p class = "123">a</p>
+    <p class = "123">a</p>
+    <p class = "123">a</p>
+
+    <button class = "upozorenje">klikni za upozorenje</button>
+    <p id="upozorenje">UPOZORENJEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE</p>
+
+
+
+    
+
+
+<script>
+    let naslov = document.querySelector('h1');
+    naslov.textContent = "DOM radi";
+    let paragraph = document.querySelector('p');
+    paragraph.textContent = "Ja sam Erik i idem u tssb";
+    naslov.style.color = "blue";
+    naslov.style.fontSize = "32px";
+
+    paragraph.style.backgroundColor = "lightblue";
+    paragraph.style.padding = "10px";
+    paragraph.style.textAlign = "center";
+
+    let button = document.querySelector('button');
+    button.addEventListener('click', function(){
+        let poruka = document.querySelector('#poruka');
+        poruka.textContent = "Uspjesno ste kliknuli na gumb";
+    })
+
+    let paragrafi = document.querySelectorAll('p');
+    paragrafi[2].style.color = "red";
+    paragrafi[3].style.color = "blue";
+    paragrafi[4].style.color = "yellow";
+
+    let upozorenje = document.querySelector('.upozorenje');
+    upozorenje.addEventListener('click', function(){
+        let upozorenjeP = document.querySelector('#upozorenje');
+        upozorenjeP.style.color = "red";
+        upozorenjeP.style.fontWeight = "bold";
+        upozorenjeP.style.backgroundColor = "yellow";
+    })
+    
+</script>
+</body>
+
+</html>

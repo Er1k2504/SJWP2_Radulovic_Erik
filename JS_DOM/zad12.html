@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Disabled atribut</title>
+  </head>
+  <body>
+    <button onclick="Onemoguci()">Onemogući</button>
+    <button onclick="Omoguci()">Omogući</button>
+
+    <br /><br />
+
+    <button id="treciGumb">Klikni</button>
+
+    <script>
+      function Onemoguci() {
+        document.getElementById("treciGumb").disabled = true;
+      }
+
+      function Omoguci() {
+        document.getElementById("treciGumb").disabled = false;
+      }
+    </script>
+  </body>
+</html>

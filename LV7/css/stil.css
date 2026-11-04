@@ -12,7 +12,7 @@ body {
 
 .zaglavlje {
   padding: 2rem 1rem;
-  background-color: #1f4e79;
+  background-color: #054603;
   color: #fff;
   text-align: center;
 }
@@ -30,7 +30,7 @@ body {
 .obrazac {
   padding: 1.25rem;
   background-color: #f4f6f8;
-  border-left: 4px solid #1f4e79;
+  border-left: 4px solid #01470c;
 }
 
 .polje { margin: 0 0 1rem; }
@@ -39,7 +39,7 @@ body {
   display: block;
   margin-bottom: 0.25rem;
   font-weight: bold;
-  color: #17365d;
+  color: #073b00;
 }
 
 .polje input,
@@ -48,7 +48,7 @@ body {
   width: 100%;
   padding: 0.5rem;
   font: inherit;
-  border: 1px solid #aab;
+  border: 1px solid rgb(32, 66, 0);
   border-radius: 4px;
 }
 
@@ -57,11 +57,44 @@ body {
   font: inherit;
   font-weight: bold;
   color: #fff;
-  background-color: #1f4e79;
+  background-color: #03462a;
   border: none;
   border-radius: 4px;
   cursor: pointer;
 }
 
 .polje button:hover,
-.polje button:focus-visible { background-color: #2e75b6; }
+.polje button:focus-visible { background-color: #018d0d; }
+
+/* skupina polja */
+.skupina {
+  margin: 0 0 1rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgb(2, 53, 17);
+  border-radius: 4px;
+}
+
+.skupina legend {
+  padding: 0 0.4rem;
+  font-weight: bold;
+  color: #044e0e;
+}
+
+.izbor { margin: 0.35rem 0; }
+
+.izbor input { width: auto; margin-right: 0.4rem; }
+
+.izbor label { display: inline; font-weight: normal; color: inherit; }
+
+.polje input:focus-visible,
+.izbor input:focus-visible {
+outline: 3px solid #f1c40f;
+outline-offset: 2px;
+}
+.izbor input {
+accent-color: #004223;
+}
+.polje input:user-invalid {
+border-color: #ff1900;
+}
+

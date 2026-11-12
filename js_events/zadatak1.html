@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family:
+          "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+      }
+
+      .naslov,
+      .counter {
+        text-align: center;
+      }
+
+      .buttoni {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .btnp,
+      .btnr,
+      .btnm {
+        border-radius: 10px;
+        margin: 20px;
+        width: 100px;
+        height: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="naslov">Brojač klikova</h1>
+    <h1 class="counter">0</h1>
+    <div class="buttoni">
+      <button class="btnp">+</button>
+      <button class="btnr">reset</button>
+      <button class="btnm">-</button>
+    </div>
+    <script>
+      let count = 0;
+      const counter = document.querySelector(".counter");
+      const button1 = document.querySelector(".btnp");
+      const button2 = document.querySelector(".btnr");
+      const button3 = document.querySelector(".btnm");
+
+      button1.addEventListener("click", function () {
+        count++;
+        counter.textContent = count;
+      });
+    </script>
+  </body>
+</html>

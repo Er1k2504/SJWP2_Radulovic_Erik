@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <title>Reakcija na tipkovnicu</title>
+</head>
+<body>
+
+    <input type="text" id="unos" placeholder="Upiši nešto...">
+
+    <p id="poruka"></p>
+
+    <script>
+        document.addEventListener("keydown", function(event) {
+
+            // Ako je pritisnut Enter
+            if (event.key === "Enter") {
+                document.getElementById("poruka").textContent = "Potvrđeno";
+            }
+
+            // Ako je pritisnut Escape
+            if (event.key === "Escape") {
+                document.getElementById("unos").value = "";
+            }
+
+            // Ispis naziva pritisnute tipke
+            console.log("Pritisnuta tipka: " + event.key);
+
+        });
+    </script>
+
+</body>
+</html>

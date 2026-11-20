@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Kalkulator</h1>
+    <input type="number" id = "a" placeholder = "Unesi vrijednost a:">
+    <input type="number" id = "b" placeholder = "Unesi vrijednost b:">
+    <button id = "zbroj">+</button>
+    <button id = "oduzmi">-</button>
+    <button id = "pomnozi">*</button>
+    <button id = "podijeli">/</button>
+    <button onclick = "izracunaj()"Izračunaj></button>
+
+    <p id = "rezultat"></p>
+
+    <script>
+        function zbroji(a,b)
+        {
+            return a + b;
+        }
+
+        function oduzmi(a,b){
+            return a-b;
+        }
+
+        function pomnozi(a,b){
+            return a*b;
+        }
+
+        function podijeli(a,b){
+            if (b==0)
+            {
+                return "Nije moguće dijeliti s nulom!";
+            }
+            return a/b;
+        }
+
+        function izvrsi(a,b,operacija){
+            return operacija(a,b);
+        }
+
+        function Izracunaj(){
+            let a = document.getElementById("a").value;
+            let b = document.getElementById("b").value;
+
+            if(a === "" || b === ""){
+                document.getElementById("rezultat").innerHTML = "Molimo unesite obje vrijednosti!";
+                return;
+            }
+
+            a = number(a);
+            b = number(b);
+
+            let rezultat = 0;
+            
+            if (izbor == "zbroj"){
+                rezultat = izvrsi(a,b,zbroji);
+            }
+            else if (izbor == "oduzmi"){
+                rezultat = izvrsi(a,b,oduzmi);
+            }
+            else if (izbor == "pomnozi"){
+                rezultat = izvrsi(a,b,pomnozi);
+            }
+            else if (izbor == "podijeli"){
+                rezultat = izvrsi(a,b,podijeli);
+            }
+
+            document.getElementById("rezultat").innerHTML = "Rezultat: " + rezultat;
+        
+        }
+
+    </script>
+</body>
+</html>

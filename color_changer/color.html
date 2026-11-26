@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Changer</title>
+  </head>
+  <body>
+    <h1>Color Changer</h1>
+
+    <button onclick="mijenjanjeBoja()">Pritisni me!</button>
+    <script>
+      let prov = true;
+
+      function mijenjanjeBoja() {
+        if (prov) {
+          document.body.style.backgroundColor = "blue";
+        } else {
+          document.body.style.backgroundColor = "red";
+        }
+
+        prov = !prov;
+      }
+    </script>
+  </body>
+</html>

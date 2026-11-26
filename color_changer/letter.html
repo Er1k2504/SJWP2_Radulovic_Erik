@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Letter counter</h1>
+
+    <textarea
+      name="tekst"
+      id="tekst"
+      placeholder="Tipkaj..."
+      oninput="broji()"
+    ></textarea>
+
+    <h2>Slova: <span id="counter">0</span></h2>
+
+    <prompt></prompt>
+    <script>
+      function broji() {
+        let tekst = document.getElementById("tekst").value;
+
+        let count = tekst.replaceU(/\s/g, "").length;
+
+        document.getElementById("counter").innerHTML = count;
+      }
+    </script>
+  </body>
+</html>
